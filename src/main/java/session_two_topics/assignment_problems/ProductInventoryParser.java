@@ -26,4 +26,4 @@ public class ProductInventoryParser {
         parseInventoryRecord("Wireless Mouse, WM-2201,150");
         parseInventoryRecord("Wireless Mouse, 150");
     }
-}   
+}

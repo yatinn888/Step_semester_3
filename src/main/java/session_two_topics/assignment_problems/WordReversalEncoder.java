@@ -3,7 +3,9 @@ package session_two_topics.assignment_problems;
 public class WordReversalEncoder {
 
     public static String reverseEachWord(String sentence) {
-        if (sentence == null || sentence.isEmpty()) return "";
+        if (sentence == null || sentence.isEmpty()) {
+            return "";
+        }
 
         String[] words = sentence.split(" ");
         StringBuilder result = new StringBuilder();

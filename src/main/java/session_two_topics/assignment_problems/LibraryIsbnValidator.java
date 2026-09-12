@@ -3,9 +3,13 @@ package session_two_topics.assignment_problems;
 public class LibraryIsbnValidator {
 
     public static String normalizeCode(String raw) {
-        if (raw == null) return "";
+        if (raw == null) {
+            return "";
+        }
         String trimmed = raw.trim();
-        if (trimmed.length() < 3) return trimmed.toUpperCase();
+        if (trimmed.length() < 3) {
+            return trimmed.toUpperCase();
+        }
 
         String pubCode = trimmed.substring(0, 3).toUpperCase();
         String rest = trimmed.substring(3);

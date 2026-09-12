@@ -5,11 +5,13 @@ import java.util.*;
 public class WordFrequencyReport {
 
     public static void printFilteredWordFrequency(String feedback) {
-        if (feedback == null || feedback.isEmpty()) return;
+        if (feedback == null || feedback.isEmpty()) {
+            return;
+        }
 
         Set<String> stopWords = new HashSet<>(Arrays.asList("the", "was", "and", "a", "is", "of", "in"));
 
-        String cleaned = feedback.toLowerCase().replaceAll("[.,!?]", "");
+        String cleaned = feedback.toLowerCase().replace(".", "").replace(",", "").replace("!", "").replace("?", "");
         String[] words = cleaned.split("\\s+");
 
         Map<String, Integer> freqMap = new HashMap<>();
